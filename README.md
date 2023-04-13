@@ -1,7 +1,7 @@
 # calc_numerico-lab
 Atividades de Laboratório da disciplina de Cálculo Numérico
 
-1ª atividade:
+*** 1ª atividade ***
 
 Desenvolver um programa que seja capaz de encontrar uma raiz aproximada de uma função real dados:
 - Uma função;
@@ -19,10 +19,8 @@ Utilizando qualquer linguagem de programação
 Utilizando qualquer biblioteca auxiliar.
 (a biblioteca pode ser usada para manipulação de estruturas de dados e funções básicas, mas o método precisa ser implementado)
 
-___________________________________________________________________________________________________________________________________
 
-
-2ª atividade:
+*** 2ª atividade ***
 
 Utilizando qualquer linguagem de programação, implementar um programa capaz de encontrar a solução de um sistema linear usando:
 - Gauss-Jacobi
@@ -47,19 +45,16 @@ Algumas coisas secundárias (que são interessantes)
 erro  |     
       |       x
       |____________ x____x___>
-          iteração
+            iteração
           
 Caminho para resolver de uma forma fácil:
 
 1 - Ler os valores de entrada e armazenar A como matriz e b como vetor.
-
 2 - Gauss-Jacobi (slide 56)
-  Calcular a matriz C
-  Calcular o vetor G.
-  x^(k+1) = Cx^(k) + G
+Calcular a matriz C
+Calcular o vetor G.
+x^(k+1) = Cx^(k) + G
   
-    Gauss-Seidel (slide 63)
-  Calcular L, R e D
-  x^(k+1) = D^(-1)b - D^(-1)Lx^(k+1) - D^(-1)Rx^(k)
-  
-___________________________________________________________________________________________________________________________________
+Gauss-Seidel (slide 63)
+Calcular L, R e D
+x^(k+1) = D^(-1)b - D^(-1)Lx^(k+1) - D^(-1)Rx^(k)
