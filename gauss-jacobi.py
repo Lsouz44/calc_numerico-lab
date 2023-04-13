@@ -33,7 +33,7 @@ x0 = [float(x) for x in input().split()]
 # Resolver o sistema linear usando o método de Gauss-Jacobi
 x = gauss_jacobi(A, b, x0)
 
-# Imprimira solução
+# Imprimir a solução
 print("A solução do sistema é: ")
 for i in range(n):
     print("x[{}] = {:.6f}".format(i, x[i]))
