@@ -39,22 +39,24 @@ Algumas coisas secundárias (que são interessantes)
 1 - Calcular o erro após cada iteração
 2 - Plotar as evoluções dos erros
  
-      ^
-      |x
-      |   x
-erro  |     
-      |       x
-      |____________ x____x___>
+     ^
+     |x
+     |   x
+erro |     
+     |       x
+     |____________ x____x___>
             iteração
           
+
 Caminho para resolver de uma forma fácil:
 
 1 - Ler os valores de entrada e armazenar A como matriz e b como vetor.
+
 2 - Gauss-Jacobi (slide 56)
-Calcular a matriz C
-Calcular o vetor G.
-x^(k+1) = Cx^(k) + G
+- Calcular a matriz C;
+- Calcular o vetor G;
+- x^(k+1) = Cx^(k) + G;
   
 Gauss-Seidel (slide 63)
-Calcular L, R e D
-x^(k+1) = D^(-1)b - D^(-1)Lx^(k+1) - D^(-1)Rx^(k)
+- Calcular L, R e D;
+- x^(k+1) = D^(-1)b - D^(-1)Lx^(k+1) - D^(-1)Rx^(k);
