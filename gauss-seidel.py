@@ -1,27 +1,24 @@
 import numpy as np
 
-# solicitar entrada da matriz
-n = int(input("Digite o tamanho da matriz: "))
-print("Digite a matriz linha por linha:")
-a = np.zeros((n,n))
-for i in range(n):
-    a[i] = [float(x) for x in input().split()]
-b = np.array([float(x) for x in input("Digite os termos independentes separados por espaço: ").split()])
+# Define o sistema linear como uma matriz e um vetor
+A = np.array([[2, -1, 0], [-1, 2, -1], [0, -1, 2]])
+b = np.array([1, 3, -2])
 
-# definir a tolerância e as condições iniciais
+# Define a tolerância e o número máximo de iterações
 tol = 1e-10
-x0 = np.zeros(n)
+max_iter = 1000
 
-# implementar o método Gauss-Seidel
-x = x0.copy()
-err = 1
-while err > tol:
-    for i in range(n):
-        s = sum(-a[i][j] * x[j] for j in range(n) if i != j)
-        x[i] = (b[i] + s) / a[i][i]
-    err = np.linalg.norm(x - x0)
-    x0 = x.copy()
+# Define os valores iniciais das variáveis
+x = np.zeros_like(b)
 
-# exibir a solução
-print("A solução do sistema é:")
+# Implementa o método de Gauss-Seidel
+for i in range(max_iter):
+    x_old = np.copy(x)
+    for j in range(len(b)):
+        x[j] = (b[j] - np.dot(A[j,:j], x[:j]) - np.dot(A[j,j+1:], x_old[j+1:])) / A[j,j]
+    if np.linalg.norm(x - x_old) < tol:
+        break
+
+# Imprime a solução
+print("Solução:")
 print(x)
