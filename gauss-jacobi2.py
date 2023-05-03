@@ -11,20 +11,23 @@ tolerancia = 1e-5
 # Definindo o chute inicial
 x_atual = np.zeros_like(b)
 
+# Armazenando a diagonal principal de A
+diagonal_A = np.diag(A)
+
 # Inicializando as listas para armazenar os erros e as soluções
 erros = []
 solutions = []
 
 # Calculando a matriz C e o vetor g
-C = np.diagflat(np.diag(A))
+C = np.diag(diagonal_A)
 C_inv = np.linalg.inv(C)
 D = C - A
-g = np.dot(C_inv, b)
+g = np.linalg.solve(C, b)
 
 # Aplicando o método de Gauss-Jacobi
 while True:
     x_anterior = x_atual
-    x_atual = np.dot(C_inv, np.dot(D, x_atual) + g)
+    x_atual = C_inv @ (D @ x_atual + g)
     erro = np.linalg.norm(x_atual - x_anterior, np.inf)
     erros.append(erro)
     solutions.append(x_atual)
