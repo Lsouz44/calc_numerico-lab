@@ -15,3 +15,11 @@ b = [5, 4, 10]
 x0 = [0, 0, 0]
 x = gauss_jacobi(A, b, x0)
 print(x)
+
+#Traceback (most recent call last):
+ # File "/home/lsouza/Documentos/calc_numerico-lab-main/gauss-jacobi.py", line 18, in <module>
+  #  x = gauss_jacobi(A, b, x0)
+  #File "/home/lsouza/Documentos/calc_numerico-lab-main/gauss-jacobi.py", line 13, in gauss_jacobi
+ #   raise Exception("O método de Gauss-Jacobi não convergiu")
+#Exception: O método de Gauss-Jacobi não convergiu
+
