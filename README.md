@@ -40,7 +40,7 @@ Algumas coisas secundárias (que são interessantes)
 2 - Plotar as evoluções dos erros
  
      ^
-     |x
+     | x
      |   x
 erro |     
      |       x
@@ -60,3 +60,18 @@ Caminho para resolver de uma forma fácil:
 Gauss-Seidel (slide 63)
 - Calcular L, R e D;
 - x^(k+1) = D^(-1)b - D^(-1)Lx^(k+1) - D^(-1)Rx^(k);
+
+
+
+*** 3ª atividade ***
+
+Método de Newton para interpolação polinomial
+
+-> Entrada: conjunto de n+1 pontos (Xk, f(Xk))
+             ponto x̅ 
+             
+-> Saída: Pn( x̅ ) usando polinômio de Newton
+
+Para fazer o polinômio, vamos precisar das diferenças divididas, o que pode ser por:
+• Tabela de diferenças divididas
+• Função recursiva
