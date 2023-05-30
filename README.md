@@ -93,11 +93,11 @@ Durante a solução, alguns passos serão:
 1- Leitura dos dados
 -> Pode ser feita da forma mais conveniente
 
-2- Cálculo do G*G e do G*y
+2- Cálculo do (G^t)G e do (G^t)y
 -> Multiplicação de matrizes **eu quero que vocês implementem**
 for   ] -> para cada posição
  for  ]       da matriz
    for ] -> produto interno
 
-3- Resolução do sistema G*Gα = G*yy
+3- Resolução do sistema (G^t)G*α = (G^t)y
 -> Pode usar biblioteca (numpy resolve)
