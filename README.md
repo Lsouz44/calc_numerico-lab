@@ -75,3 +75,29 @@ Método de Newton para interpolação polinomial
 Para fazer o polinômio, vamos precisar das diferenças divididas, o que pode ser por:
 • Tabela de diferenças divididas
 • Função recursiva
+
+
+
+*** 4ª atividade ***
+
+Mínimos quadrados
+Implementar um programa que:
+
+1- Receba um conjunto de pontos unidimensionais (Xk, f(Xk)), um grau desejado n e um valor de x qualquer e calcule α(x) através de um polinômio de grau n.
+
+2- Receba um conjunto de pontos P-dimensionais e calcule α(x) para um X P-dimensional qualquer.
+_______________________________________________________________________________________________________
+
+Durante a solução, alguns passos serão:
+
+1- Leitura dos dados
+-> Pode ser feita da forma mais conveniente
+
+2- Cálculo do G*G e do G*y
+-> Multiplicação de matrizes **eu quero que vocês implementem**
+for   ] -> para cada posição
+ for  ]       da matriz
+   for ] -> produto interno
+
+3- Resolução do sistema G*Gα = G*yy
+-> Pode usar biblioteca (numpy resolve)
